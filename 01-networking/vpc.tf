@@ -1,7 +1,5 @@
 resource "aws_vpc" "this" {
-  cidr_block = "10.0.0.0/16"
+  cidr_block = var.vpc.cidr_block
 
-  tags = {
-    Name = "workshop-march-vpc-3"
-  }
+  tags = { Name = var.vpc.name }
 }
